@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_login_background"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/user_email_login_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Email Adresiniz"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/user_password_login_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_email_login_et"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:hint="Parola"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_password_login_et"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:padding="16dp"
+            android:text="Giriş Yap"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/button_go_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_login"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:padding="16dp"
+            android:text="Kayıt Ol"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

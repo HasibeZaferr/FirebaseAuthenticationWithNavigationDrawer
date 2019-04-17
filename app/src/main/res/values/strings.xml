@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GezginApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Gezgin Uygulaması</string>
+    <string name="nav_header_subtitle">Bir gezginin kayıtları</string>
+    <string name="nav_header_desc">Gezgin Uygulaması</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "772020985649",
+    "firebase_url": "https://gykfirebaseauthsampleproject.firebaseio.com",
+    "project_id": "gykfirebaseauthsampleproject",
+    "storage_bucket": "gykfirebaseauthsampleproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772020985649:android:a63a97c074ca99cc",
+        "android_client_info": {
+          "package_name": "gelecegiyazanlar.com.gykfirebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772020985649-277k0ejic0kvv5vsi3tpv7eo98kekc5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeM_Iw1k0exUcxwEp5esOVFb_FYlJfXrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772020985649-277k0ejic0kvv5vsi3tpv7eo98kekc5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

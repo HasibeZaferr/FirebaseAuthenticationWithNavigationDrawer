@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/nav_profile_picture" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Zeliha Gündüz"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profile_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Gezmeyi ve kitap okumayı seven bir gezgin." />
+
+    <TextView
+        android:id="@+id/profile_user_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_bio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Gezdiğim İller: Trabzon,Mardin,İstanbul,İzmir." />
+
+    <ImageView
+        android:id="@+id/profile_user_instagram"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/profile_user_place"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/instagram_ic" />
+
+
+</RelativeLayout>
