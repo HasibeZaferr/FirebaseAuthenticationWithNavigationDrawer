@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "772020985649-ck07nm06ai1oclnggqkfq4t2tmko6n9b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "gelecegiyazanlar.com.gykfirebaseauthentication",
+            "certificate_hash": "3261540b1fdab7a6c56ebd9af1cd03ee09549385"
+          }
+        },
+        {
           "client_id": "772020985649-277k0ejic0kvv5vsi3tpv7eo98kekc5m.apps.googleusercontent.com",
           "client_type": 3
         }

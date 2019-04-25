@@ -12,6 +12,11 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_person_black_24dp"
             android:title="Profilim" />
+        <item
+            android:id="@+id/nav_my_notes"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Notlarım" />
+
     </group>
 
     <item android:title="Ayarlar">

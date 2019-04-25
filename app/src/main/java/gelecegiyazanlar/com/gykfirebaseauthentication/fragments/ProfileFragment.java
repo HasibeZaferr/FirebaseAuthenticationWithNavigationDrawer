@@ -1,10 +1,13 @@
 package gelecegiyazanlar.com.gykfirebaseauthentication.fragments;
 
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +15,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import gelecegiyazanlar.com.gykfirebaseauthentication.R;
+import gelecegiyazanlar.com.gykfirebaseauthentication.activities.AddPhotoActivity;
+import gelecegiyazanlar.com.gykfirebaseauthentication.models.PhotoModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,7 +48,8 @@ public class ProfileFragment extends Fragment {
     TextView profileName;
     TextView profileBio;
     ImageView profileUserInstagram;
-
+    ImageView changeProfilePhoto;
+    private ProgressDialog progressDialog;
     private OnFragmentInteractionListener mListener;
 
     public ProfileFragment() {
@@ -75,9 +89,18 @@ public class ProfileFragment extends Fragment {
 
         View profileView = inflater.inflate(R.layout.fragment_profile,container,false);
         profilePhoto = (ImageView) profileView.findViewById(R.id.profile_photo);
+        changeProfilePhoto = (ImageView) profileView.findViewById(R.id.change_profile_photo);
         profileName = (TextView) profileView.findViewById(R.id.profile_name);
         profileBio = (TextView) profileView.findViewById(R.id.profile_bio);
         profileUserInstagram = (ImageView) profileView.findViewById(R.id.profile_user_instagram);
+
+        changeProfilePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AddPhotoActivity.class);
+                startActivity(intent);
+            }
+        });
 
         profileUserInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,8 +108,55 @@ public class ProfileFragment extends Fragment {
                 openInstagram();
             }
         });
+
         // Inflate the layout for this fragment
         return profileView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        showProfilePhoto();
+
+    }
+
+
+
+    private void showProfilePhoto() {
+        showProgressDialog();
+        FirebaseStorage fStorage = FirebaseStorage.getInstance();
+        StorageReference storageRef = fStorage.getReference();
+        storageRef.child("userprofilephoto").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                progressDialog.dismiss();
+                //Picasso.with(context).load(uri).fit().centerCrop().into(holder.userImage);
+                Glide.with(getContext())
+                        .load(uri)
+                        .asBitmap()
+                        .centerCrop()
+                        .into(new SimpleTarget<Bitmap>(200,200) {
+                            @Override
+                            public void onResourceReady(Bitmap resource,GlideAnimation glideAnimation) {
+                                profilePhoto.setImageBitmap(resource);
+                            }
+                        });
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
+
+            }
+        });
+    }
+
+    private void showProgressDialog() {
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Yükleniyor...");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
     }
 
     private void openInstagram() {

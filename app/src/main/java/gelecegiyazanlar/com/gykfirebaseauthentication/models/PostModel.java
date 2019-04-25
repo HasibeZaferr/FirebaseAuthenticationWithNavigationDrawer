@@ -40,6 +40,4 @@ public class PostModel {
         this.postDescription = postDescription;
     }
 
-
-
 }
