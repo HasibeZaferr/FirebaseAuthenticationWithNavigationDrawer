@@ -130,7 +130,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onSuccess(Uri uri) {
                 progressDialog.dismiss();
-                //Picasso.with(context).load(uri).fit().centerCrop().into(holder.userImage);
+
                 Glide.with(getContext())
                         .load(uri)
                         .asBitmap()

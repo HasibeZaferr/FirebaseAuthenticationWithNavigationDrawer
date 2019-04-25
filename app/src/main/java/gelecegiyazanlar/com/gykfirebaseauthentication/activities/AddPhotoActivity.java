@@ -131,11 +131,6 @@ public class AddPhotoActivity extends AppCompatActivity {
         progressDialog.show();
     }
 
-    private void goToProfilePage(){
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_frame, new ProfileFragment());
-        transaction.commit();
-    }
 
     private void  dismissProgressDialog(){
         progressDialog.dismiss();
