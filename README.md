@@ -1,4 +1,6 @@
 # Gezgin App
 💃💪
 
-![alt text](https://firebasestorage.googleapis.com/v0/b/gykfirebaseauthsampleproject.appspot.com/o/New%20Project-198.png?alt=media&token=9a2fe5c9-b0d7-4eab-a2e9-f8c6dc1ec5ef)
+
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/siniffen-88d83.appspot.com/o/Screen%20Shot%202019-04-18%20at%2020.38.31.png?alt=media&token=b211f6f2-2890-4b3e-a9f7-ed31c8799f96)
